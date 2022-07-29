@@ -1,0 +1,2 @@
+!function(){var o={openModalBtn1:document.querySelector("[data-modal-open_form-mobile]"),closeModalBtn1:document.querySelector("[data-modal-close_form-mobile]"),modal1:document.querySelector("[data-modal_form-mobile]"),body:document.querySelector("body")};function e(){o.modal1.classList.toggle("is-hidden_form"),o.body.classList.toggle("no-scroll")}o.openModalBtn1.addEventListener("click",e),o.closeModalBtn1.addEventListener("click",e)}();
+//# sourceMappingURL=index.87fd0536.js.map

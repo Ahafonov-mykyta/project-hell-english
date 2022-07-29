@@ -1,0 +1,2 @@
+!function(){"use strict";var t=document.querySelector(".back_to_top");window.addEventListener("scroll",(function(){var e=window.pageYOffset;document.documentElement.clientHeight,e>200&&t.classList.add("back_to_top-show"),e<200&&t.classList.remove("back_to_top-show")})),t.addEventListener("click",(function t(){window.pageYOffset>0&&(window.scrollBy(0,-80),setTimeout(t,0))}))}();
+//# sourceMappingURL=index.cda2f6d2.js.map

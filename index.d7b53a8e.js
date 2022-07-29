@@ -1,0 +1,2 @@
+!function(){var o={openModalBtn:document.querySelector("[data-modal-open_form]"),closeModalBtn:document.querySelector(".modal__button--close--form"),modal:document.querySelector("[data-modal_form]"),body:document.querySelector("body")};function e(){o.modal.classList.toggle("is-hidden_form"),o.body.classList.toggle("no-scroll")}o.openModalBtn.addEventListener("click",e),o.closeModalBtn.addEventListener("click",e),o.openMobileModalButton.addEventListener("click",e)}();
+//# sourceMappingURL=index.d7b53a8e.js.map
