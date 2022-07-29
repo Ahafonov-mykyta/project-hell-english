@@ -1,0 +1,142 @@
+
+.footer-contact {
+  padding: 40px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include tablet {
+      flex-direction: unset;
+      
+  }
+  @include desktop {
+      padding: 80px 0;
+  }
+  &__container {
+      @extend %container;
+  }
+  &__logo {
+      display: flex;
+      height: 29px;
+      width: 80px;  
+      margin-bottom: 20px;
+      cursor: pointer;
+      
+      @include tablet {
+          width: 128px;
+          height: 45px;
+          margin-bottom: 0;
+      }
+      
+      
+  }
+  .footer-logo__icon {
+    width: 80px;
+    @include tablet {
+        width: 128px;
+        height: 45px;
+    }
+  }
+  
+  &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include tablet {
+          flex-direction: unset;
+          margin-left: auto;
+      }
+      @include desktop {
+          margin-left: 452px;
+      }
+  }
+  
+  &__link {
+      display: flex;
+      align-items: center;
+      @include font (600, 14px, 1.21, 0.08em);
+      color: $primary-text-color;
+      @include tablet {
+          font-size: 20px;
+      }
+      @include desktop {
+          font-size: 30px;
+      }
+      &--insta {
+          width: 40px;
+          height: 40px;
+      }
+      &:hover, &:focus {
+        color: $accent-color;
+      }
+      &:hover .footer-contact__icon--phone {
+        fill: $primary-text-color;
+    }
+      transition: color 250ms linear;
+  }
+  
+  
+
+  &__icon--phone {
+      margin-right: 8px;
+      fill: $accent-color;
+      width: 20px;
+      transition: fill 250ms linear;
+      @include tablet {
+          width: 24px;
+      }
+      @include desktop {
+          width: 30px;
+          margin-right: 16px;
+          
+      }
+      
+  }
+
+  &__item--insta {
+      display: flex;
+      position: relative;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      margin-top: 20px;
+      background-image: url(../images/icons/instagram.svg);
+      background-repeat: no-repeat;
+      @include tablet {
+          margin-top: 0;
+          margin-left: 40px;
+      }
+      &::before {
+          display: none;
+          cursor: default;
+          position: absolute;
+          content: "";
+          width: 0px;
+          height: 40px;
+          top: 0;
+          left: -20px;
+          border-left: 1px solid $secondary-text-color;
+          @include tablet {
+              display: unset;
+          }
+      }
+  }
+  
+  
+}
+
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  background-color: $primary-text-color;
+  &__discription {
+      @include font (500, 14px, 2, null);
+      color: $secondary-text-color;
+      }
+}
+
+
+

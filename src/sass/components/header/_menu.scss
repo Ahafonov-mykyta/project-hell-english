@@ -1,0 +1,105 @@
+.mobile-menu {
+  @media screen and (max-width: 1679px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(1679px);
+    opacity: 0;
+    // transition: transform 250ms linear, opacity 250ms linear;
+
+    width: 100vw;
+    height: 100vh;
+
+    padding: 20px 20px;
+
+    background-color: $backdrop-mobile-menu-color;
+  }
+
+  @media screen and (min-width: 1680px) {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &__button {
+    display: none;
+
+    fill: currentColor;
+    color: $primary-white-color;
+    transition: color 250ms linear;
+    cursor: pointer;
+
+    @media screen and (max-width: 1679px) {
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+      background-color: transparent;
+      border: none;
+      padding: 0;
+    }
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  &.is-open {
+    transform: translateX(0px);
+    transition: transform 250ms linear, opacity 250ms linear;
+    opacity: 1;
+    z-index: 5;
+  }
+
+  &__logo {
+    display: none;
+  }
+
+  &.is-open &__logo {
+    display: block;
+
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.menu-button {
+  display: none;
+
+  fill: black;
+  transition: fill 250ms linear;
+
+  cursor: pointer;
+  @media screen and (max-width: 1679px) {
+    display: block;
+    padding: 0;
+    margin-left: auto;
+    // fill: $primary-white-color;
+
+    background-color: transparent;
+    border: none;
+    // &:hover {
+    //   fill: $accent-color;
+    // }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 40px;
+  }
+
+  &:hover {
+    fill: $accent-color;
+  }
+}
+
+// dark-mode--------------
+.page-header.dark-theme .menu-button {
+  fill: $primary-white-color;
+  &:hover {
+    fill: $accent-color;
+  }
+}

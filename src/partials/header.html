@@ -1,0 +1,92 @@
+<header class="page-header" data-dark-theme>
+      <div class="container page-header__container">
+        <div class="toggle-wrapper">
+                  <button type="button" class="theme-toggle" data-dark-theme-button >
+        <svg viewBox="0 0 24 24"  class="toggle-on">
+          <use href="./images/spite.svg#toggle-on"></use>
+        </svg>
+        <svg viewBox="0 0 24 24"  class="toggle-off">
+          <use href="./images/spite.svg#toggle-off"></use>
+        </svg>
+      </button>
+        </div>
+      <div class="flex-wrapper header__flex-wrap">
+        <a href="./index.html"><img src="./images/program/logo.svg" alt="Логотип" class="page-header__logo" data-header-logo data-dark-theme-logo/></a>
+        <a href="./index.html"><img src="./images/program/logo-mobile-menu.svg" alt="Логотип" class="page-header__logo-dark-theme" data-dark-theme-logo-two/></a>
+        </div>
+                <div class="btn-wrapper">
+        <button type="button" class="page-header__tub-button" data-modal-open_form-mobile >consultation by phone</button>
+        <button type="button" class="menu-button" data-menu-button aria-expanded="false" aria-controls="mobile-menu" data-mobile-modal data-mobile-modal2>  
+              <svg width="22" height="12">
+                <use href="./images/spite.svg#icon-menu" class="page-header__icon-menu"></use>
+              </svg>
+        </button>
+      </div>
+        <div class="mobile-menu" data-menu id="mobile-menu">
+          <a href="./index.html"><img src="./images/program/logo-mobile-menu.svg" alt="Логотип" class="mobile-menu__logo"></a>
+          <button type="button" data-close-btn class="mobile-menu__button" aria-controls="mobile-menu" data-close-modal> 
+            <svg width="16" height="16" class="page-header__icon-close">
+                <use href="./images/spite.svg#icon-close"></use>
+              </svg>
+          </button>
+          <nav class="page-header__navigation">
+            <ul class="page-header__list" data-ul-list>
+              <li class="page-header__item"><a href="#program" class="page-header__link">Studying program</a></li>
+              <li class="page-header__item"><a href="#about" class="page-header__link">About</a></li>
+              <li class="page-header__item"><a href="#training-option" class="page-header__link">Training options</a></li>
+              <li class="page-header__item"><a href="#contacts" class="page-header__link">Contacts</a></li>
+            </ul>
+          </nav>
+      <button type="button" class="page-header__button" data-modal-open_form >consultation by phone</button>
+      </div>
+
+      <div class="backdrop is-hidden_form" data-modal_form data-modal_form-mobile>
+        <div class="modal">
+          <button class="modal__button--close modal__button--close--form" type="button">
+            <svg class="modal__button--icon--white">
+              <use href="./images/icons/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="contacts__container-form">
+            <h2 class="contacts__title">
+              Registration for a <span class="accent">free</span> phone
+              <span class="accent">consultation</span> on the nuances of English UPE
+            </h2>
+            <p class="contacts__description contacts__description--form">
+              Leave a request for participation in a <span class="accent">free lesson</span>. <br />
+              A consultant will contact you and answer your questions
+            </p>
+            <form class="contacts__form">
+              <label class="contacts__label">
+                <input
+                  class="contacts__input"
+                  type="text"
+                  placeholder="Name*"
+                  minlength="2"
+                  required
+                  oninvalid="this.setCustomValidity('Please enter Your name')" oninput="setCustomValidity('')"
+                />
+              </label>
+              <label class="contacts__label">
+                <input
+                  class="contacts__input"
+                  type="tel"
+                  placeholder="Phone*"
+                  required
+                  oninvalid="this.setCustomValidity('Please enter you phone number in format 0671112233')" oninput="setCustomValidity('')"
+                  title="0671112233"
+                  pattern="\+?[0-9\s\-\(\)]+"
+                  minlength="10"
+                  maxlength="10"/>
+                </label>
+                <button type="submit" class="contacts__button wow zoomIn" data-wow-duration="1s">і want a free lesson</button>
+              </form>
+          </div>
+
+            
+        
+      </div>
+      </div>
+      
+    </header>
+    

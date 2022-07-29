@@ -1,0 +1,47 @@
+<section class="contacts" id="contacts">
+  <div class="contacts__container">
+    <h2 class="contacts__title wow zoomIn" data-wow-duration="1s">
+      Registration for a <span class="accent">free</span> phone
+      <span class="accent">consultation</span> on the nuances of English UPE
+    </h2>
+    <p class="contacts__description wow zoomIn" data-wow-duration="1s">
+      Leave a request for participation in a
+      <span class="accent">free lesson</span>. <br />
+      A consultant will contact you and answer your questions
+    </p>
+    <form class="contacts__form">
+      <label class="contacts__label">
+        <input
+          class="contacts__input"
+          type="text"
+          placeholder="Name*"
+          minlength="2"
+          required
+          oninvalid="this.setCustomValidity('Please enter Your name')"
+          oninput="setCustomValidity('')"
+        />
+      </label>
+      <label class="contacts__label">
+        <input
+          class="contacts__input"
+          type="tel"
+          placeholder="Phone*"
+          required
+          oninvalid="this.setCustomValidity('Please enter you phone number in format 0671112233')"
+          oninput="setCustomValidity('')"
+          title="0671112233"
+          pattern="\+?[0-9\s\-\(\)]+"
+          minlength="10"
+          maxlength="10"
+        />
+      </label>
+      <button
+        type="submit"
+        class="contacts__button wow zoomIn"
+        data-wow-duration="1s"
+      >
+        і want a free lesson
+      </button>
+    </form>
+  </div>
+</section>

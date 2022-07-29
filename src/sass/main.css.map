@@ -1,0 +1,25 @@
+{
+    "version": 3,
+    "mappings": "AGAA,AAAA,EAAE;AACF,EAAE;AACF,EAAE;AACF,EAAE;AACF,EAAE;AACF,EAAE,CAAC;EACF,MAAM,EAAE,CAAC;CACT;;AAED,AAAA,CAAC,CAAC;EACD,MAAM,EAAE,CAAC;CACT;;AAED,AAAA,EAAE;AACF,EAAE,CAAC;EACF,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,IAAI;CAChB;;AAED,AAAA,KAAK,CAAC;EACL,eAAe,EAAE,IAAI;CACrB;;AAED,AAAA,KAAK,CAAC;EACL,UAAU,EAAE,IAAI;CAChB;;AAED,AAAA,GAAG,CAAC;EACH,OAAO,EAAE,KAAK;EACd,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,IAAI;CACZ;;AAED,AAAA,CAAC,CAAC;EACD,OAAO,EAAE,KAAK;EACd,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,IAAI;CACrB;;AAED,AAAA,IAAI,CAAC;EACJ,WAAW,EFzCA,YAAY,EAAE,UAAU;EE0CnC,UAAU,EAAE,MAAM;CAGlB;;AO7CD,AAAA,QAAQ,CAAC;EACR,WAAW,EAAE,YAAY;EACzB,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;CAmCjB",
+    "sources": [
+        "main.scss",
+        "utils/_variables.scss",
+        "utils/_mixins.scss",
+        "utils/_placeholder.scss",
+        "utils/_buttons.scss",
+        "components/_header.scss",
+        "components/_hero.scss",
+        "components/_advantages.scss",
+        "components/_problems.scss",
+        "components/_how-we-do-it.scss",
+        "components/_program.scss",
+        "components/_benefits.scss",
+        "components/_about.scss",
+        "components/_guarantee.scss",
+        "components/_reviews.scss",
+        "components/_contacts.scss",
+        "components/_footer.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

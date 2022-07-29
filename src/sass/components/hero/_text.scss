@@ -1,0 +1,39 @@
+.hero-section__text-wrapper {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.57;
+  letter-spacing: 0.08em;
+  color: $secondary-text-color;
+
+  @media screen and (min-width: 1680px) {
+    font-size: 20px;
+    line-height: 1.65;
+  }
+}
+
+.hero-section__text {
+  margin-bottom: 40px;
+
+  @extend .hero-section__text-wrapper;
+  font-weight: 700;
+  color: $primary-text-color;
+
+  @media screen and (min-width: 1680px) {
+    margin-bottom: 48px;
+  }
+}
+
+.hero-section__text-wrapper--accent-color {
+  font-weight: 700;
+  color: $accent-color;
+
+  @media screen and (min-width: 1680px) {
+    color: $primary-text-color;
+  }
+}
+
+.hero-section__br {
+  @media screen and (min-width: 1680px) {
+    display: none;
+  }
+}

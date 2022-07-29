@@ -1,0 +1,213 @@
+.contacts {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    
+
+    &::before {
+        width: 100%;
+        content:"";
+        opacity: 0.2;
+        position: absolute;
+        z-index:-1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: url(../images/contacts/contacts-mobile-1x.jpg);
+        background-position: center;
+        background-size: cover;
+        @media (min-resolution: 2dppx) {
+            background-image: url(../images/contacts/contacts-mobile-2x.jpg);
+        }
+        @include mobile {
+            width: 100%;
+            background-image: url(../images/contacts/contacts-tablet-1x.jpg);
+            @media (min-resolution: 2dppx) {
+                background-image: url(../images/contacts/contacts-tablet-2x.jpg);
+            }
+        }
+        @include desktop {
+            width: 100%;
+            background-image: url(../images/contacts/contacts-desktop-1x.jpg);
+            @media (min-resolution: 2dppx) {
+                background-image: url(../images/contacts/contacts-desktop-2x.jpg);
+            }
+            background-size: 1920px;
+            background-repeat: no-repeat;
+        }
+    }
+    &::after {
+        content: " ";
+        background-color: $primary-text-color;
+        
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -2;
+    }
+    &__container {
+        max-width: 480px;
+        padding: 40px 20px;
+        margin: 0 auto 0 auto;
+        
+        @include tablet {
+            max-width: 768px;
+            padding: 40px 40px;
+        }
+        @include desktop {
+            max-width: 1680px;
+            padding: 80px 295px;
+    
+        }
+    }
+
+    &__container-form {
+        max-width: 480px;
+        
+        margin: 0 auto 0 auto;
+        
+        @include tablet {
+            max-width: 768px;
+            
+        }
+        @include desktop {
+            max-width: 1680px;
+            
+    
+        }
+    }
+    &__title {
+        margin-bottom: 24px;
+        @include font (800, 14px, 1.3, 0.03em);
+        text-align: center;
+        color: $primary-white-color;
+        @include tablet {
+            margin-bottom: 40px;
+            font-size: 26px;
+        }
+        @include desktop {
+            font-size: 46px;
+            max-width: 1090px;
+        }
+    }
+    &__description {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 440px;
+        margin-bottom: 40px;
+        @include font (600, 12px, 1.25, 0.08em);
+
+        color: $primary-white-color;
+        @include tablet {
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+        @include desktop {
+            max-width: 1090px;
+            margin-bottom: 60px;
+            font-size: 30px;
+        }
+    }
+
+    &__description--form{
+        text-align: center;
+    }
+    &__form {
+        display:flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 336px;
+        @include desktop {
+            max-width: 528px;
+        }
+        
+    }
+    
+    &__input {
+        display: flex;
+        align-items: center;
+        height: 48px;
+        width: 100%;
+        margin-bottom: 20px;
+        outline: none;
+        @include font (600, 14px, 1.21, 0.08em);
+
+        color: $primary-white-color;
+        background-color: transparent;
+        padding-left: 28px;
+        
+        border: 1px solid $primary-white-color;
+        &::placeholder {
+        color: $primary-white-color;
+        }
+        &:hover, &:focus {
+            border-color: $accent-color;
+        } 
+        &:focus:required:invalid {
+            border: 3px solid #e03202;
+        }
+        &:focus:required:valid {
+            border: 1px solid #4cb44c;
+        }
+        
+
+        @include desktop {
+            height: 70px;
+            max-width: 528px;
+            margin-bottom: 32px;
+            font-size: 20px;
+        
+        }
+        &:not(:placeholder-shown):required:invalid {
+            border: 3px solid #e03202;
+        }
+        transition: border 250ms;
+    }
+    &__button {
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        height: 48px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        border: 2px solid $accent-color;
+        background-color: $accent-color;
+
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.25;
+        letter-spacing: 0.08em;
+        color: $primary-white-color;
+
+        &:hover, &focus {
+            background-color: $primary-white-color;
+            border-color: $accent-color;
+            color: $accent-color;
+        }
+        transition: background-color 250ms linear, color 250ms linear,
+    border-color 250ms linear;
+        
+        @include font (700, 12px, 1.25, 0.08em);
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: $primary-white-color;
+        @include tablet {
+            margin-top: 12px;
+        }
+        @include desktop {
+            margin-top: 8px;
+            @include font (null, 14px, 1.21, 0.14em);
+            height: 70px;
+        }
+    }
+}
+
+.accent {
+    color: $accent-color;
+}
+

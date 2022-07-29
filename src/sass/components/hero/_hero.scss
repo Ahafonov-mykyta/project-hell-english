@@ -1,0 +1,33 @@
+.hero-section {
+  @extend %section;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.waves {
+  background-image: url(../images/program/vector12.png);
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/program/vector12-tab.png);
+  }
+
+  @media screen and (min-width: 1680px) {
+    background-image: url(../images/program/vector12-desc.png);
+    background-position-y: 17%;
+  }
+}
+
+.hero__flex-wrapper {
+  @media screen and (min-width: 768px) {
+    display: flex;
+
+    margin-bottom: 100px;
+  }
+
+  @media screen and (min-width: 1680px) {
+    margin-bottom: 46px;
+  }
+}

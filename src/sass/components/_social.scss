@@ -1,0 +1,44 @@
+/* Социальные сети */
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+
+  &__item {
+    margin-right: 10px;
+  }
+
+  &__item:nth-last-child(-n + 1) {
+    margin-right: 0px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: #b9b9b9;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  &__button--grey {
+    @extend .social__button;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  &__button:hover,
+  &__button:focus {
+    color: $accent-color;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}

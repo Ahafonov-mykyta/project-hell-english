@@ -1,0 +1,305 @@
+.program {
+  @extend %section;
+  padding-bottom: 0;
+  background-image: linear-gradient(
+    to bottom,
+    $primary-text-color 90%,
+    #fbfbfb 10%
+  );
+  @media screen and (min-width: $desktop) {
+    position: relative;
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(
+      to bottom,
+      $primary-text-color 85%,
+      #fbfbfb 15%
+    );
+  }
+
+  &__container {
+    position: relative;
+    @extend %container;
+    padding-left: 88px;
+
+    @media screen and (min-width: $tablet) {
+      padding-left: 32px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding-left: 16px;
+      position: static;
+    }
+  }
+
+  &__title {
+    @extend %container__title;
+    margin-bottom: 40px;
+    color: $primary-white-color;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 136px;
+    }
+  }
+
+  &__block {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 140px;
+      margin-bottom: 100px;
+    }
+  }
+
+  &__unit {
+    position: relative;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $tablet) {
+      padding-left: 184px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 240px;
+      padding-left: 0;
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+  }
+  &__unit:last-child {
+    margin-bottom: 0;
+    @media screen and (min-width: $desktop) {
+      margin-right: 0;
+    }
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $primary-white-color;
+    margin-bottom: 4px;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 30px;
+      line-height: 0.93;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: $desktop) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    margin-bottom: 4px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 24px;
+    }
+  }
+  &__item:last-child {
+    margin-bottom: 0;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item:not(:first-child) {
+    @media screen and (min-width: $tablet) {
+      margin-left: 41px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-left: 0;
+    }
+  }
+
+  &__item--fourth-semester {
+    @extend .program__item;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item--fourth-semester:not(:first-child) {
+    @media screen and (min-width: $tablet) {
+      margin-left: 29px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-left: 0;
+    }
+  }
+  &__item--fourth-semester:last-child {
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__element {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.65;
+    letter-spacing: 0.08em;
+    color: $accent-color;
+    @media screen and (min-width: $desktop) {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__text {
+    width: 140px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.08em;
+    color: #b9b9b9;
+    opacity: 0.5;
+    @media screen and (min-width: $desktop) {
+      font-size: 18px;
+      line-height: 1.56;
+      width: 240px;
+    }
+  }
+
+  &__text-fourth-semester {
+    @extend .program__text;
+    width: 176px;
+    @media screen and (min-width: $tablet) {
+      width: 156px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 240px;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    outline: 1px solid #ffffff;
+    height: 1190px;
+    top: 82px;
+    left: 62px;
+    @media screen and (min-width: $tablet) {
+      top: 84px;
+      left: 103px;
+      height: 743px;
+    }
+    @media screen and (min-width: $desktop) {
+      height: 0;
+      width: 100%;
+      top: 230px;
+      left: 0;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    bottom: -103px;
+    left: 170px;
+    width: 176px;
+
+    @media screen and (min-width: $tablet) {
+      bottom: -100px;
+      left: 400px;
+      width: 368px;
+    }
+    @media screen and (min-width: $desktop) {
+      bottom: -237px;
+      left: -15px;
+      width: 684px;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 8px;
+    left: -32px;
+    border-radius: 50%;
+    background: #ff6b09;
+    z-index: 10;
+
+    @media screen and (min-width: $tablet) {
+      left: 65px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      top: -52px;
+      left: 0;
+    }
+  }
+}
+
+.program.dark-theme .program__container .program__block .program__picture {
+  @media screen and (min-width: 1680px) {
+    bottom: -193px;
+    left: -50px;
+  }
+}
+
+.list__title {
+  @extend %container__title;
+  color: $primary-white-color;
+  text-align: start;
+  margin-top: 225px;
+  margin-bottom: 32px;
+  width: 180px;
+  @media screen and (max-width: 767px) {
+    margin-top: 145px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 492px;
+    margin-top: 180px;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+.program .list-container {
+  @media screen and (min-width: $desktop) {
+    margin-top: 237px;
+  }
+}
+
+// ------- Dark Theme
+.program.dark-theme {
+  position: relative;
+  background-image: linear-gradient(#111518 85%, #111518 15%);
+}

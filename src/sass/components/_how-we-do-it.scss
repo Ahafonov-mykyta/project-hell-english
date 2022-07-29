@@ -1,0 +1,147 @@
+.how-list__icon{
+    display: block;
+    fill: $accent-color;
+    height: 48px;
+    width: 60px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: fill 250ms $timing;
+
+        @media screen and (min-width:$tablet){
+            margin-bottom: 32px;
+            }   
+
+        .how-list__item:hover &, .how-list__item:focus &{
+            fill: $primary-white-color;    
+        }
+}
+
+.section{
+    @extend %section;
+}
+
+.how-section{
+    background-color: #FBFBFB;
+}
+.container__title{
+    @extend %container__title;
+    text-align: center;
+    margin-bottom: 32px;
+        @media screen and (min-width:$tablet){
+            margin-bottom: 40px;
+            } 
+
+        @media screen and (min-width:$desktop){
+            margin-bottom: 80px;
+            text-align: start;
+            } 
+}
+
+.how-list {
+    margin-bottom: -16px;
+        @media screen and (min-width:$tablet){
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -32px;
+            margin-bottom: -24px;
+    }
+       
+        @media screen and (min-width:$desktop){
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -32px;
+            margin-bottom: -32px;
+    }
+}
+
+.how-list__item {
+    padding: 32px 11px 0px 11px;
+    width: 280px;
+    height: 280px;
+    cursor: pointer;
+
+    margin-bottom: 16px;
+    background-color: $primary-white-color;
+    box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+    transition: background-color 250ms $timing;
+
+            @media screen and (min-width:$tablet){
+                flex-basis: calc(100%/2 - 32px); 
+                margin-left: 32px;
+                margin-bottom: 24px;
+                width: 336px;
+                height: 336px;
+                padding: 40px 30px 0px 30px;
+             }
+             
+             @media screen and (min-width:$desktop){
+                flex-basis: calc(100%/3 - 32px); 
+                margin-left: 32px;
+                margin-bottom: 32px;
+                width: 528px;
+                height: 492px;
+                padding: 90px 81px 0px 81px;
+             }           
+             &:hover, &:focus{
+                background-color: $accent-color;
+            }
+            
+}
+
+.how-list__title {
+    @include font(700, 14px, 1.43, 0.08em);
+    text-align: center;
+    margin-bottom: 40px;
+    transition: color 250ms $timing;
+
+        @media screen and (min-width:$tablet){
+            margin-bottom: 48px;
+            }  
+            
+        @media screen and (min-width:$desktop){
+            @include font(700, 20px, 1.4, 0.08em);
+            width: 365px;
+            }  
+
+        .how-list__item:hover &, .how-list__item:focus &{
+         color: $primary-white-color;
+        }
+}
+.how-list__article {
+    @include font(500, 12px, 1.67, 0.08em);
+    position: relative;
+    color: $secondary-text-color;
+    text-align: center;
+    transition: color 250ms $timing;
+
+
+        &::before{
+            content: '';
+            position: absolute;
+            display:block;
+            top: -20;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 2px;
+            background: $accent-color; 
+            transition: background-color 250ms $timing;
+            
+            @media screen and (min-width:$tablet){
+                top: -24;
+                } 
+        }
+        
+        @media screen and (min-width:$desktop){
+            @include font(500, 18px, 1.56, 0.08em);
+            } 
+
+        .how-list__item:hover &, .how-list__item:focus &{
+            color: $primary-white-color;    
+           }
+
+        .how-list__item:hover &::before, .how-list__item:focus &::before{
+            background-color: $primary-white-color;    
+           }
+        }        

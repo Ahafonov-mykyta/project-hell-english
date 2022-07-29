@@ -1,0 +1,42 @@
+.hero-section__button {
+  display: inline-flex;
+
+  margin-bottom: 40px;
+  padding: 15px 53px;
+
+  text-transform: uppercase;
+  border: 2px solid $accent-color;
+  background-color: $accent-color;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  color: $primary-white-color;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $accent-color;
+    color: $accent-color;
+  }
+
+  transition: background-color 250ms linear, color 250ms linear,
+    border-color 250ms linear;
+
+  @media screen and (min-width: 768px) {
+    padding: 15px 45px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1680px) {
+    padding: 27px 70px;
+
+    font-size: 14px;
+    line-height: 1.214;
+    letter-spacing: 0.14em;
+
+    margin-bottom: 0;
+  }
+}

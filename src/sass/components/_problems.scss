@@ -1,0 +1,130 @@
+.problems {
+  background-image: linear-gradient(
+    to bottom,
+    $primary-text-color 74%,
+    #fbfbfb 26%
+  );
+  padding-top: 24px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 80px;
+    background-image: url(../images/problems/svg/burn-bg.svg),
+      linear-gradient(to bottom, $primary-text-color 74%, #fbfbfb 26%);
+    background-size: 445px 472px, contain;
+    background-repeat: no-repeat;
+    background-position: 100% 19%, center;
+  }
+}
+
+.container {
+  @extend %container;
+}
+
+.section__title {
+  @extend %container__title;
+  margin-bottom: 24px;
+  color: $primary-white-color;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 80px;
+  }
+
+  &--accent {
+    color: $accent-color;
+  }
+}
+
+.list-container {
+  background-color: $primary-white-color;
+  padding: 20px 24px 24px 32px;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+
+  @media screen and (min-width: $tablet) {
+    padding: 32px 80px 32px 80px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 60px 140px;
+  }
+}
+
+.problems-list {
+  counter-reset: section;
+  margin-bottom: -16px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -40px;
+    margin-bottom: -20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -80px;
+    margin-bottom: -40px;
+  }
+}
+.problems-list__item {
+  @include font(700, 14px, 1.43, 0.08em);
+  position: relative;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 2 - 40px);
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    @include font(700, 20px, 1.4, 0.08em);
+    flex-basis: calc(100% / 3 - 85px);
+    margin-left: 85px;
+    margin-bottom: 40px;
+  }
+
+  &::before {
+    margin-left: 28px;
+    margin-bottom: 5px;
+    color: $accent-color;
+    counter-increment: section; /* Инкрементирует счётчик*/
+    content: '0' counter(section);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: $accent-color;
+    position: absolute;
+    top: 10;
+    left: 0;
+  }
+}
+.problems-list__article {
+  @media screen and (min-width: $desktop) {
+    margin-top: 15px;
+  }
+}
+
+// ------- Dark Theme
+.problems.dark-theme {
+  position: relative;
+  background-image: url(../images/problems/svg/burn-bg.svg);
+  @include tablet {
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+
+  @media screen and (max-width: 767px) {
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+}

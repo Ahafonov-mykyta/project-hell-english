@@ -1,0 +1,245 @@
+.reviews {
+  @extend %section;
+
+  &__container {
+    @extend %container;
+
+    @media screen and (min-width: $tablet) {
+      box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    }
+    @media screen and (min-width: $tablet) {
+      padding-top: 20px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding-left: 200px;
+      padding-right: 200px;
+      padding-top: 40px;
+    }
+    &.dark-theme-shadow {
+      background-color: white;
+      padding-top: 40px;
+    }
+  }
+
+  &__title {
+    @extend %container__title;
+    text-align: center;
+    margin-bottom: 24px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__block {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__picture {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $tablet) {
+      margin-left: 40px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-left: 120px;
+    }
+  }
+
+  &__image {
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+    @media screen and (min-width: $tablet) {
+      margin-top: 12px;
+      width: 150px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+  }
+
+  &__person {
+    width: 240px;
+    margin-right: auto;
+    margin-left: auto;
+    @media screen and (min-width: $tablet) {
+      width: 450px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 710px;
+      margin-left: 40px;
+      text-align: left;
+    }
+  }
+
+  &__name {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.08em;
+    color: $accent-color;
+    margin-bottom: 16px;
+    @media screen and (min-width: $tablet) {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 30px;
+      line-height: 1.23;
+    }
+  }
+  &__bio {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.08em;
+    color: #b9b9b9;
+    margin-bottom: 16px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.21;
+    }
+  }
+  &__feedback {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.67;
+    color: #3d3d3d;
+    @media screen and (min-width: $desktop) {
+      font-size: 18px;
+      line-height: 1.56;
+    }
+
+    &--accent {
+      color: $accent-color;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: 600px;
+
+  @media screen and (min-width: $tablet) {
+    height: 350px;
+  }
+  @media screen and (min-width: $desktop) {
+    height: 400px;
+  }
+}
+.swiper-button-next {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  color: #b9b9b9;
+  @media screen and (min-width: $tablet) {
+    top: 98px;
+    right: 0;
+  }
+  @media screen and (min-width: $desktop) {
+    right: 145px;
+  }
+}
+.swiper-button-next::after {
+  content: '\2192';
+  font-size: 30px;
+}
+.swiper-button-next:hover {
+  color: $accent-color;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.swiper-button-prev {
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  color: #b9b9b9;
+  @media screen and (min-width: $tablet) {
+    top: 98px;
+    left: 0;
+  }
+}
+
+.swiper-button-prev::after {
+  content: '\2190';
+  font-size: 30px;
+}
+
+.swiper-button-prev:hover {
+  color: $accent-color;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swiper-pagination-bullet {
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+}
+.swiper-pagination-bullet:first-child {
+  background-image: url(../images/feedback/lady1.jpg);
+}
+.swiper-pagination-bullet:nth-child(2) {
+  background-image: url(../images/feedback/lady2.jpg);
+}
+.swiper-pagination-bullet:nth-child(3) {
+  background-image: url(../images/feedback/lady3.jpg);
+}
+.swiper-pagination-bullet:nth-child(4) {
+  background-image: url(../images/feedback/lady4.jpg);
+}
+.swiper-pagination-bullet:nth-child(5) {
+  background-image: url(../images/feedback/lady5.jpg);
+}
+.swiper-pagination-bullet:nth-child(6) {
+  background-image: url(../images/feedback/lady6.jpg);
+}
+.swiper-pagination-bullet:nth-child(7) {
+  background-image: url(../images/feedback/lady7.jpg);
+}
+
+// ----Dark Theme
+.reviews.dark-theme .reviews__container {
+  @media screen and (min-width: 1680px) {
+    background-color: $primary-white-color;
+    padding-top: 40px;
+  }
+}
+
+.reviews__container.dark-theme-shadow .reviews__title {
+  @include tablet {
+    margin-bottom: 69px;
+    box-shadow: 0 7px 7px -8px, 0 -8px 4px -11px, 10px 12px 16px -1px;
+    font-size: 34px;
+
+    background-color: #2aa5a0;
+    background-image: linear-gradient(20deg, black 48%, #ff6b09 5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

@@ -1,0 +1,121 @@
+.card-set {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.card-set__item {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% - (21px * 2) / 3);
+
+    &:not(:last-child) {
+      margin-right: 21px;
+    }
+  }
+
+  @media screen and (min-width: 1680px) {
+    flex-basis: calc(100% - (113px * 2) / 3);
+
+    &:not(:last-child) {
+      margin-right: 113px;
+    }
+  }
+}
+
+.card-set__item--icon-one::before {
+  content: '';
+
+  margin-right: 12px;
+
+  width: 60px;
+  height: 62px;
+  background-image: url(../images/program/man.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-width: 768px) {
+    width: 62px;
+  }
+
+  @media screen and (min-width: 1680px) {
+    width: 100px;
+    height: 102px;
+
+    margin-right: 0;
+
+    background-image: url(../images/program/man-desc.svg);
+  }
+}
+
+.card-set__item--icon-two::before {
+  content: '';
+
+  margin-right: 12px;
+
+  width: 60px;
+  height: 62px;
+  background-image: url(../images/program/smartphone.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-width: 768px) {
+    width: 65px;
+  }
+
+  @media screen and (min-width: 1680px) {
+    width: 100px;
+    height: 102px;
+
+    margin-right: 0;
+
+    background-image: url(../images/program/smartphone-desc.svg);
+  }
+}
+
+.card-set__item--icon-three::before {
+  content: '';
+
+  margin-right: 12px;
+
+  width: 60px;
+  height: 62px;
+  background-image: url(../images/program/dollar.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-width: 768px) {
+    width: 73px;
+  }
+
+  @media screen and (min-width: 1680px) {
+    width: 100px;
+    height: 102px;
+
+    margin-right: 0;
+
+    background-image: url(../images/program/dollar-desc.svg);
+  }
+}
+
+.card-set__text-wrapper {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.64;
+  letter-spacing: 0.08em;
+  color: $primary-text-color;
+
+  @media screen and (min-width: 1680px) {
+    font-size: 20px;
+
+    transform: translateX(-18px);
+  }
+}
